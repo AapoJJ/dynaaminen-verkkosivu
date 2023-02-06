@@ -27,9 +27,9 @@ const App = () => {
 
   return (
     <div>
-      <h1>Blood Alcohol Level Calculator</h1>
+      <h1>Alkometri</h1>
       <div>
-        <label>Weight (kg):</label>
+        <label>paino (kg):</label>
         <input
           type="number"
           value={weight}
@@ -39,16 +39,16 @@ const App = () => {
       <div>
       <label>
           <input type="radio" name="gender" value="male" checked={gender === 'male'} onChange={e => setGender(e.target.value)} />
-          Male
+          Mies
         </label>
         <br />
         <label>
           <input type="radio" name="gender" value="female" checked={gender === 'female'} onChange={e => setGender(e.target.value)} />
-          Female
+          Nainen
         </label>
       </div>
       <div>
-        <label>Number of Beer Bottles:</label>
+        <label>olutpullojen määrä:</label>
         <input
           type="number"
           value={beer}
@@ -56,16 +56,16 @@ const App = () => {
         />
       </div>
       <div>
-        <label>Time (hours):</label>
+        <label>aika (tunnit):</label>
         <input
           type="number"
           value={time}
           onChange={(e) => setTime(e.target.value)}
         />
       </div>
-      <button onClick={calculateBloodAlcoholLevel}>Calculate</button>
+      <button onClick={calculateBloodAlcoholLevel}>laske</button>
       <div>
-        <h2>Result:</h2>
+        <h2>tulos:</h2>
         <p>{result}</p>
       </div>
     </div>
